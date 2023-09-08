@@ -1,0 +1,5 @@
+
+Display name: app_olympic
+Application (client) ID: 61124596-9c26-4b06-b8c8-268effc6ff67
+Object ID: e0ce4db0-2965-4af9-8bd9-81ee7e374e0d
+Directory (tenant) ID: c3f83d43-eaa0-454a-809d-87e95444c5bc
