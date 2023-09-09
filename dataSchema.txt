@@ -29,3 +29,26 @@ Teams
  |-- Discipline: string (nullable = true)
  |-- Country: string (nullable = true)
  |-- Event: string (nullable = true)
+
+
+# Insights and Analysis to consider: 
+
+1. **Medal Distribution by Country**: Besides the top gold medals, you can analyze the distribution of all medals (gold, silver, and bronze) by country. Create a visualization or table showing the countries with the most medals in total.
+
+2. **Medal Distribution by Discipline**: Analyze which disciplines or sports had the most medals awarded and which had the fewest. You can create a chart or table to visualize this.
+
+3. **Performance Over Time**: If you have data for multiple years (not just Tokyo 2020), you can analyze how a country's performance in terms of medals has changed over the years. Have some countries improved or declined in their performance?
+
+4. **Gender Distribution in Different Disciplines**: Explore the gender distribution in different disciplines. Are there some sports that are predominantly male or female? You can create charts or statistics to highlight these differences.
+
+5. **Country Ranking Changes**: Analyze how countries' rankings have changed from previous Olympic events to Tokyo 2020. Have there been significant shifts in the rankings?
+
+6. **Demographics of Athletes and Coaches**: Explore the demographics of athletes and coaches. What is the average age of athletes? Are there more male or female athletes? What about coaches?
+
+7. **Correlation Analysis**: Look for correlations between different variables. For example, is there a correlation between the number of entries (athletes) from a country and the number of medals they win? You can use statistical methods to investigate this.
+
+8. **Country-Specific Analysis**: Pick a few specific countries and dive deep into their performance. Compare and contrast their athletes, coaches, and medal counts.
+
+9. **Visualization**: Create compelling visualizations to present your findings effectively. Use bar charts, line graphs, pie charts, and heatmaps to make your analysis visually appealing and easy to understand.
+
+10. **Predictive Modeling (Optional)**: If you're comfortable with machine learning, you can try to build a predictive model to forecast medal counts for future Olympics based on historical data.
