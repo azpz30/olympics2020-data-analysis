@@ -1,0 +1,31 @@
+Athletes
+ |-- Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+
+Coaches
+ |-- Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Event: string (nullable = true)
+
+EntriesGender
+ |-- Discipline: string (nullable = true)
+ |-- Female: integer (nullable = true)
+ |-- Male: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+
+Medals
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+
+Teams
+ |-- Name: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Event: string (nullable = true)
