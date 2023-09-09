@@ -52,3 +52,34 @@ Teams
 9. **Visualization**: Create compelling visualizations to present your findings effectively. Use bar charts, line graphs, pie charts, and heatmaps to make your analysis visually appealing and easy to understand.
 
 10. **Predictive Modeling (Optional)**: If you're comfortable with machine learning, you can try to build a predictive model to forecast medal counts for future Olympics based on historical data.
+
+
+
+-- List of tables I imported: 
+athletes.show()
+coaches.show()
+entriesGender.show()
+medals.show()
+teams.show()
+
+-- List of tables I created
+# Top gold medals ordered by countries
+top_gold_countries
+# Average number of entries by gender for each discipline
+average_entries_by_gender
+# distribution of all medals (gold, silver, and bronze) by country
+top_medal_countries
+# Calculate the percentages of gold, silve, bronze of each country and format them to two decimal places
+percent_gold_silver_bronze
+# Group the medals df by 'Team/Country' and sum the medals for each country
+medal_distribution_by_country
+# Calculate the total medals for each discipline by summing Gold, Silver, and Bronze
+medals_per_discipline
+# Find the discipline with the most medals awarded
+most_medals_discipline
+# teams joined with medals_per_discipline
+medals_teams_joined
+# Group the "medals_teams_joined" DataFrame by "Discipline" and sum the medals for each discipline
+medals_by_discipline
+# Group the "EntriesGender" DataFrame by "Discipline" and calculate the total number of male and female participants
+gender_distribution
