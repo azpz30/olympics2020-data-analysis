@@ -56,11 +56,33 @@ Teams
 
 
 -- List of tables I imported: 
-athletes.show()
-coaches.show()
-entriesGender.show()
-medals.show()
-teams.show()
+athletes
+ |-- (Athletes) Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+coaches
+ |-- (Coaches) Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Event: string (nullable = true)
+entriesGender
+ |-- Discipline: string (nullable = true)
+ |-- Female: integer (nullable = true)
+ |-- Male: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+medals
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+teams
+ |-- (Country) Name: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Event: string (nullable = true)
 
 -- List of tables I created
 
