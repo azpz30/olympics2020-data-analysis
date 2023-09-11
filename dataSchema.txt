@@ -63,23 +63,98 @@ medals.show()
 teams.show()
 
 -- List of tables I created
+
 # Top gold medals ordered by countries
 top_gold_countries
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+
 # Average number of entries by gender for each discipline
 average_entries_by_gender
+ |-- Discipline: string (nullable = true)
+ |-- Female: integer (nullable = true)
+ |-- Male: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Avg_Female: double (nullable = true)
+ |-- Avg_Male: double (nullable = true)
+
 # distribution of all medals (gold, silver, and bronze) by country
 top_medal_countries
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+
 # Calculate the percentages of gold, silve, bronze of each country and format them to two decimal places
 percent_gold_silver_bronze
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+ |-- Gold%: string (nullable = true)
+ |-- Silver%: string (nullable = true)
+ |-- Bronze%: string (nullable = true)
+
 # Group the medals df by 'Team/Country' and sum the medals for each country
 medal_distribution_by_country
+ |-- Team/Country: string (nullable = true)
+ |-- Total Gold: long (nullable = true)
+ |-- Total Silver: long (nullable = true)
+ |-- Total Bronze: long (nullable = true)
+
 # Calculate the total medals for each discipline by summing Gold, Silver, and Bronze
 medals_per_discipline
+ |-- Team/Country: string (nullable = true)
+ |-- Total Gold: long (nullable = true)
+ |-- Total Silver: long (nullable = true)
+ |-- Total Bronze: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
 # Find the discipline with the most medals awarded
-most_medals_discipline
+medals_discipline_wise
+ |-- Discipline: string (nullable = true)
+ |-- Total Gold Medals: long (nullable = true)
+ |-- Total Silver Medals: long (nullable = true)
+ |-- Total Bronze Medals: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
 # teams joined with medals_per_discipline
 medals_teams_joined
+ |-- Team/Country: string (nullable = true)
+ |-- Name: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Event: string (nullable = true)
+ |-- Total Gold: long (nullable = true)
+ |-- Total Silver: long (nullable = true)
+ |-- Total Bronze: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
 # Group the "medals_teams_joined" DataFrame by "Discipline" and sum the medals for each discipline
 medals_by_discipline
+ |-- Discipline: string (nullable = true)
+ |-- Total Gold Medals: long (nullable = true)
+ |-- Total Silver Medals: long (nullable = true)
+ |-- Total Bronze Medals: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
 # Group the "EntriesGender" DataFrame by "Discipline" and calculate the total number of male and female participants
 gender_distribution
+ |-- Discipline: string (nullable = true)
+ |-- Total Female Participants: long (nullable = true)
+ |-- Total Male Participants: long (nullable = true)
+ |-- Total Participants: long (nullable = true)
+ |-- Percentage Female: string (nullable = true)
+ |-- Percentage Male: string (nullable = true)
+
+
