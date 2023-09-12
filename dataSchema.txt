@@ -1,0 +1,182 @@
+Athletes
+ |-- (Athletes) Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+
+Coaches
+ |-- (Coaches) Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Event: string (nullable = true)
+
+EntriesGender
+ |-- Discipline: string (nullable = true)
+ |-- Female: integer (nullable = true)
+ |-- Male: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+
+Medals
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+
+Teams
+ |-- (Country) Name: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Event: string (nullable = true)
+
+
+# Insights and Analysis to consider: 
+
+1. **Medal Distribution by Country**: Besides the top gold medals, you can analyze the distribution of all medals (gold, silver, and bronze) by country. Create a visualization or table showing the countries with the most medals in total.
+
+2. **Medal Distribution by Discipline**: Analyze which disciplines or sports had the most medals awarded and which had the fewest. You can create a chart or table to visualize this.
+
+3. **Performance Over Time**: If you have data for multiple years (not just Tokyo 2020), you can analyze how a country's performance in terms of medals has changed over the years. Have some countries improved or declined in their performance?
+
+4. **Gender Distribution in Different Disciplines**: Explore the gender distribution in different disciplines. Are there some sports that are predominantly male or female? You can create charts or statistics to highlight these differences.
+
+5. **Country Ranking Changes**: Analyze how countries' rankings have changed from previous Olympic events to Tokyo 2020. Have there been significant shifts in the rankings?
+
+6. **Demographics of Athletes and Coaches**: Explore the demographics of athletes and coaches. What is the average age of athletes? Are there more male or female athletes? What about coaches?
+
+7. **Correlation Analysis**: Look for correlations between different variables. For example, is there a correlation between the number of entries (athletes) from a country and the number of medals they win? You can use statistical methods to investigate this.
+
+8. **Country-Specific Analysis**: Pick a few specific countries and dive deep into their performance. Compare and contrast their athletes, coaches, and medal counts.
+
+9. **Visualization**: Create compelling visualizations to present your findings effectively. Use bar charts, line graphs, pie charts, and heatmaps to make your analysis visually appealing and easy to understand.
+
+10. **Predictive Modeling (Optional)**: If you're comfortable with machine learning, you can try to build a predictive model to forecast medal counts for future Olympics based on historical data.
+
+
+
+-- List of tables I imported: 
+athletes
+ |-- (Athletes) Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+coaches
+ |-- (Coaches) Name: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Event: string (nullable = true)
+entriesGender
+ |-- Discipline: string (nullable = true)
+ |-- Female: integer (nullable = true)
+ |-- Male: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+medals
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+teams
+ |-- (Country) Name: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Event: string (nullable = true)
+
+-- List of tables I created
+
+# Top gold medals ordered by countries
+top_gold_countries
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+
+# Average number of entries by gender for each discipline
+average_entries_by_gender
+ |-- Discipline: string (nullable = true)
+ |-- Female: integer (nullable = true)
+ |-- Male: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Avg_Female: double (nullable = true)
+ |-- Avg_Male: double (nullable = true)
+
+# distribution of all medals (gold, silver, and bronze) by country
+top_medal_countries
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+
+# Calculate the percentages of gold, silve, bronze of each country and format them to two decimal places
+percent_gold_silver_bronze
+ |-- Rank: integer (nullable = true)
+ |-- Team/Country: string (nullable = true)
+ |-- Gold: integer (nullable = true)
+ |-- Silver: integer (nullable = true)
+ |-- Bronze: integer (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- Rank by Total: integer (nullable = true)
+ |-- Gold%: string (nullable = true)
+ |-- Silver%: string (nullable = true)
+ |-- Bronze%: string (nullable = true)
+
+# Group the medals df by 'Team/Country' and sum the medals for each country
+medal_distribution_by_country
+ |-- Team/Country: string (nullable = true)
+ |-- Total Gold: long (nullable = true)
+ |-- Total Silver: long (nullable = true)
+ |-- Total Bronze: long (nullable = true)
+
+# Calculate the total medals for each discipline by summing Gold, Silver, and Bronze
+medals_per_discipline
+ |-- Team/Country: string (nullable = true)
+ |-- Total Gold: long (nullable = true)
+ |-- Total Silver: long (nullable = true)
+ |-- Total Bronze: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
+# Find the discipline with the most medals awarded
+medals_discipline_wise
+ |-- Discipline: string (nullable = true)
+ |-- Total Gold Medals: long (nullable = true)
+ |-- Total Silver Medals: long (nullable = true)
+ |-- Total Bronze Medals: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
+# teams joined with medals_per_discipline
+medals_teams_joined
+ |-- Team/Country: string (nullable = true)
+ |-- Name: string (nullable = true)
+ |-- Discipline: string (nullable = true)
+ |-- Event: string (nullable = true)
+ |-- Total Gold: long (nullable = true)
+ |-- Total Silver: long (nullable = true)
+ |-- Total Bronze: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
+# Group the "medals_teams_joined" DataFrame by "Discipline" and sum the medals for each discipline
+medals_by_discipline
+ |-- Discipline: string (nullable = true)
+ |-- Total Gold Medals: long (nullable = true)
+ |-- Total Silver Medals: long (nullable = true)
+ |-- Total Bronze Medals: long (nullable = true)
+ |-- Total Medals: long (nullable = true)
+
+# Group the "EntriesGender" DataFrame by "Discipline" and calculate the total number of male and female participants
+gender_distribution
+ |-- Discipline: string (nullable = true)
+ |-- Total Female Participants: long (nullable = true)
+ |-- Total Male Participants: long (nullable = true)
+ |-- Total Participants: long (nullable = true)
+ |-- Percentage Female: string (nullable = true)
+ |-- Percentage Male: string (nullable = true)
+
+
