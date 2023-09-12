@@ -5,10 +5,20 @@ This GitHub repository hosts the code and resources for an extensive data analys
 
 ## Key Features
 - **Data Ingestion:** Utilizes Azure Data Factory to ingest and process raw Olympics 2020 data.
+<img width="2560" alt="azure_data_factory" src="https://github.com/azpz30/olympics2020-data-analysis/assets/76789643/8c86cea5-6c7b-496b-8f2c-7f21454b5c81">
+
 - **Data Transformation:** Cleans, transforms, and enriches the data using Azure Databricks.
+<img width="2560" alt="azure_resource_group" src="https://github.com/azpz30/olympics2020-data-analysis/assets/76789643/c9a2d899-2365-41c9-aae4-44ee1ae402e0">
+
 - **Storage:** Stores organized data in Azure Data Lake Gen-2 and Azure Data Storage.
+<img width="2560" alt="azure_storage_account" src="https://github.com/azpz30/olympics2020-data-analysis/assets/76789643/1fd80edd-8946-4c8c-a30b-70c71061be8e">
+
 - **Analytics:** Utilizes Azure Synapse Analytics for SQL queries to create charts and graphs for visualization.
+<img width="2560" alt="azure_synapse_analytics" src="https://github.com/azpz30/olympics2020-data-analysis/assets/76789643/e3733fbb-510c-47c4-87bc-711ed0fa87b6">
+
 - **Insights:** Extracts various insights, including top-performing countries, gender-based entry statistics, medal distributions, and more.
+<img width="2560" alt="azure_databricks" src="https://github.com/azpz30/olympics2020-data-analysis/assets/76789643/044373fd-e829-4996-8dc9-07c4029476e1">
+
 - **GitHub Structure:** The repository is organized with initial data files in the 'initialData' folder and post-transformation data in the 'postTransformationData' folder.
 
 ## Insights Extracted
