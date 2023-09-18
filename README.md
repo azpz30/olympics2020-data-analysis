@@ -22,7 +22,7 @@ This GitHub repository hosts the code and resources for an extensive data analys
 - **GitHub Structure:** The repository is organized with initial data files in the 'initialData' folder and post-transformation data in the 'postTransformationData' folder.
 
 ## Insights Extracted
-- Top countries by the number of gold medals won.
+- Top disciplines by the number of gold medals won.
 ![medals_country_wise](https://github.com/azpz30/olympics2020-data-analysis/assets/76789643/d72a24d8-76fc-4f1d-ab69-ade3cc4dfdf3)
 
 - Average entries by gender for each discipline.
